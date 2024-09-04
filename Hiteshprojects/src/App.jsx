@@ -4,8 +4,21 @@ import BgChanger from "./components/BgChanger";
 import PasswordGen from "./components/PasswordGen";
 import useCurrencyInfo from "./hooks/useCurrencyInfo.js";
 import { InputBox } from "./components/index";
+import Login from "./components/Login.jsx";
+import Profile from "./components/Profile.jsx";
+import UserContextProvider from "./context/userContextProvider.jsx";
 
 function App() {
+  // ContextApi hook code
+  return (
+    <UserContextProvider>
+      <h1>React vedio for Context API</h1>
+      <Login />
+      <Profile />
+    </UserContextProvider>
+  );
+
+  // hooks code
   // const [amount, setAmount] = useState(0);
   // const [from, setFrom] = useState("usd");
   // const [to, setTo] = useState("pkr");
@@ -74,7 +87,11 @@ function App() {
   //     </div>
   //   </div>
   // );
+
+  // PasswordGen code
   // <PasswordGen />;
+
+  // BgChanger code
   // <BgChanger />;
 }
 
