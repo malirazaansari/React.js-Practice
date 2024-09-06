@@ -4,7 +4,7 @@ import { Link, useNavigate } from "react-router-dom";
 import Button from "./Button";
 import Input from "./Input";
 import Logo from "./Logo";
-import { useFrom } from "react-hook-form";
+import { useForm } from "react-hook-form";
 import { useDispatch } from "react-redux";
 import { login } from "../store/authSlice";
 
@@ -12,7 +12,7 @@ function Signup() {
   const navigate = useNavigate();
   const [error, setError] = useState("");
   const dispatch = useDispatch();
-  const { register, handleSubmit } = useFrom();
+  const { register, handleSubmit } = useForm();
 
   const create = async () => {
     setError("");

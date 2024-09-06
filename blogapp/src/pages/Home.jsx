@@ -10,18 +10,22 @@ function Home() {
     appwriteService.getPosts([]).then((posts) => {
       if (posts) {
         setPosts(posts.documents);
+        console.log(posts);
       }
     });
   }, []);
   if (posts.length === 0) {
-    <div className="w-full py-8">
-      <Container>
-        <div className="flex flex-wrap">
-          <h1>Login to posts</h1>
-        </div>
-      </Container>
-    </div>;
+    return (
+      <div className="w-full py-8">
+        <Container>
+          <div className="flex flex-wrap">
+            <h1>Login to posts</h1>
+          </div>
+        </Container>
+      </div>
+    );
   }
+  console.log("PostCard Props:", { $id, title, featuredImage });
 
   // TODO
   return (

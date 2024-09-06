@@ -1,5 +1,5 @@
 import React from "react";
-import { Container } from "../container/Container";
+import Container from "../container/Container";
 import Logo from "../Logo";
 import { Link } from "react-router-dom";
 import LogoutBtn from "./LogoutBtn.jsx";
@@ -53,7 +53,7 @@ function Header() {
                 <li key={item.name}>
                   <button
                     onClick={() => navigate(item.slug)}
-                    className="inline-bock px-6 py-2 duration-200 hover:bg-blue-100 rounded-full"
+                    className="inline-block px-6 py-2 duration-200 hover:bg-blue-100 rounded-full"
                   >
                     {item.name}
                   </button>

@@ -2,7 +2,7 @@ import { Client, Account, ID } from "appwrite";
 import conf from "../conf/conf.js";
 
 export class AuthService {
-  client = new client();
+  client = new Client();
   account;
 
   constructor() {
@@ -40,7 +40,7 @@ export class AuthService {
     try {
       return await this.account.get();
     } catch (error) {
-      console.log("Appwrite service :: getCurrentUser() :: ", error);
+      console.log("Appwrite service :: get() :: ", error);
     }
     return null;
   }

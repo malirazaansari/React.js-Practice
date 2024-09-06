@@ -4,7 +4,7 @@ function Logo({ width = "100%" }) {
   return (
     <img
       src=""
-      style={width}
+      style={{ width }}
       alt="Logo PlaceHolder"
     />
   );
